@@ -1,0 +1,128 @@
+Python Programming Basics Guide
+================================
+
+What is Python?
+Python is a high-level, interpreted programming language created by Guido van Rossum and first released in 1991. It emphasizes code readability and simplicity, making it an excellent choice for beginners and experienced developers alike.
+
+Variables and Data Types
+Python has several built-in data types:
+- Integers (int): Whole numbers like 1, 42, -7
+- Floats (float): Decimal numbers like 3.14, -0.001
+- Strings (str): Text enclosed in quotes like "Hello, World!"
+- Booleans (bool): True or False values
+- Lists (list): Ordered collections like [1, 2, 3]
+- Dictionaries (dict): Key-value pairs like {"name": "Alice", "age": 30}
+
+Variables in Python don't need explicit type declarations. You simply assign a value:
+name = "Alice"
+age = 30
+is_student = True
+
+Control Flow
+Python uses indentation to define code blocks. The main control flow statements are:
+
+If-Else Statements:
+if age >= 18:
+    print("You are an adult")
+elif age >= 13:
+    print("You are a teenager")
+else:
+    print("You are a child")
+
+For Loops:
+for i in range(5):
+    print(i)  # Prints 0, 1, 2, 3, 4
+
+While Loops:
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+Functions
+Functions are reusable blocks of code defined with the 'def' keyword:
+def greet(name):
+    return f"Hello, {name}!"
+
+message = greet("Alice")
+print(message)  # Output: Hello, Alice!
+
+Functions can have default parameters:
+def power(base, exponent=2):
+    return base ** exponent
+
+Lists and List Comprehensions
+Lists are one of Python's most versatile data structures:
+fruits = ["apple", "banana", "cherry"]
+fruits.append("date")  # Add an item
+fruits.remove("banana")  # Remove an item
+
+List comprehensions provide a concise way to create lists:
+squares = [x**2 for x in range(10)]
+even_numbers = [x for x in range(20) if x % 2 == 0]
+
+Dictionaries
+Dictionaries store key-value pairs:
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# Accessing values
+print(person["name"])  # Alice
+print(person.get("age"))  # 30
+
+# Adding new key-value pairs
+person["email"] = "alice@example.com"
+
+Error Handling
+Python uses try-except blocks for error handling:
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except Exception as e:
+    print(f"An error occurred: {e}")
+finally:
+    print("This always runs")
+
+Object-Oriented Programming
+Python supports OOP with classes:
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+my_dog = Dog("Buddy", "Golden Retriever")
+print(my_dog.bark())  # Buddy says Woof!
+
+Modules and Imports
+Python has a rich standard library and supports importing modules:
+import math
+print(math.pi)  # 3.141592653589793
+
+from datetime import datetime
+print(datetime.now())
+
+Virtual Environments
+Virtual environments isolate project dependencies:
+python -m venv myenv
+source myenv/bin/activate  # On Mac/Linux
+myenv\Scripts\activate  # On Windows
+pip install package_name
+pip freeze > requirements.txt
+
+File Handling
+Python makes it easy to work with files:
+# Writing to a file
+with open("output.txt", "w") as f:
+    f.write("Hello, World!")
+
+# Reading from a file
+with open("output.txt", "r") as f:
+    content = f.read()
+    print(content)

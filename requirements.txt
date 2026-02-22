@@ -1,0 +1,15 @@
+# Core RAG Dependencies
+langchain>=0.3
+langchain-google-genai>=2.0
+langchain-chroma>=0.2
+langchain-community>=0.3
+langchain-text-splitters>=0.3
+
+# Vector Database (runs locally - no cloud setup needed)
+chromadb>=0.5
+
+# Environment variable management
+python-dotenv>=1.0
+
+# Document loaders
+pypdf>=5.0
